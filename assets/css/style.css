@@ -25,16 +25,43 @@ header {
     width: 100;
 }
 
-h1 {
-    font-family: "Open Sans", sans-serif;
+header a {
+          text-decoration: none;
+          color: inherit;
 }
 
+h1 {
+    font-family: "Open Sans", sans-serif;
+    color: blue;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#menu {
+       font-size: 110;
+       letter-spacing: 4px;
+       list-style-type: none;
+}
+
+#menu > li {
+            margin-bottom: 1em;
+}
+
+/* Navbar dropdown Menu */
+nav {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    left: 0;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px;
+}
 /* main */
 main {
     background-color: lightblue;
 /* Make main element take the surplus space to push footer down */
     flex: 1 0 auto;
-
+    margin-top: 47px;
 }
 
 /* footer */
