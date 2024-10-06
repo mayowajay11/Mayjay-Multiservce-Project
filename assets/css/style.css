@@ -4,16 +4,16 @@
 /* Asterisk wildcart selector to override default style added by the browser */
 * {
     padding: 0;
-    margin:0%;
+    margin: 0%;
     box-sizing: border-box;
 }
 
 /* General Body style */
 body {
-       min-height: 100vh;
-       display: flex;
-       flex-direction: column;
-       font-family: "Open Sans", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Open Sans", sans-serif;
 }
 
 /* Header */
@@ -23,15 +23,17 @@ header {
     z-index: 99;
     width: 100;
     display: flex;
-    align-items:center;
+    align-items: center;
     flex-wrap: wrap;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for clarity */
-    height: auto; /* Ensure the header can expand to fit content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Add subtle shadow for clarity */
+    height: auto;
+    /* Ensure the header can expand to fit content */
 }
 
 header a {
-          text-decoration: none;
-          color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
 h1 {
@@ -43,16 +45,16 @@ h1 {
 }
 
 #menu {
-       font-size: 110;
-       letter-spacing: 4px;
-       list-style-type: none;
-       margin: 0;
-       padding: 0;
-       display: flex;
+    font-size: 110;
+    letter-spacing: 4px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
-#menu > li {
-            margin-left: 2em;
+#menu>li {
+    margin-left: 2em;
 }
 
 /* Navbar dropdown Menu */
@@ -72,17 +74,28 @@ nav {
 /* main */
 main {
     background-color: lightblue;
-/* Make main element take the surplus space to push footer down */
+    /* Make main element take the surplus space to push footer down */
     flex: 1 0 auto;
     padding: 1rem;
 }
 
 /* footer */
-footer {
-    background-color: orange;
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: darkgray;
+
 }
 /* Media querry tablets and larger 768px and more */
 @media screen and (min-width: 768px) {
+
     /* Header */
     nav {
         position: static;
@@ -94,13 +107,17 @@ footer {
 
     #menu {
         display: flex;
-        justify-content: flex-end; /* Aligns the menu to the right in larger screens */
+        justify-content: flex-end;
+        /* Aligns the menu to the right in larger screens */
     }
 
-    #menu > li {
-        margin-left: 2em; /* Add space between menu items */
-        margin-bottom: 0; /* Remove vertical margin */
+    #menu>li {
+        margin-left: 2em;
+        /* Add space between menu items */
+        margin-bottom: 0;
+        /* Remove vertical margin */
     }
+
     #logo {
         font-size: 280%;
         line-height: 75px;
@@ -111,7 +128,7 @@ footer {
 
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
-    #menu a:hover{
+    #menu a:hover {
         border-bottom: 1px solid #3a3a3a;
     }
 }
@@ -119,29 +136,38 @@ footer {
 /* Media query for phones (small screens) */
 @media screen and (max-width: 767px) {
     header {
-        flex-direction: column; /* Stack h1 and nav vertically */
-        align-items: flex-start; /* Align items to the left */
+        flex-direction: column;
+        /* Stack h1 and nav vertically */
+        align-items: flex-start;
+        /* Align items to the left */
         padding: 1rem;
     }
 
     nav {
         margin-left: 0;
-        width: 100%; /* Make nav take the full width */
+        width: 100%;
+        /* Make nav take the full width */
     }
 
     #menu {
-        flex-direction: column; /* Stack menu items vertically */
+        flex-direction: column;
+        /* Stack menu items vertically */
         margin-top: 1em;
     }
 
-    #menu > li {
+    #menu>li {
         margin-left: 0;
-        margin-bottom: 1em; /* Add spacing between vertical menu items */
+        margin-bottom: 1em;
+        /* Add spacing between vertical menu items */
     }
+
     h1 {
-        margin-bottom: 1rem; /* Add space between h1 and the nav */
+        margin-bottom: 1rem;
+        /* Add space between h1 and the nav */
     }
+
     main {
-        padding: 1rem; /* Padding for better readability */
+        padding: 1rem;
+        /* Padding for better readability */
     }
 }
