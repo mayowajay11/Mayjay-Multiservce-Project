@@ -20,11 +20,13 @@ body {
 header {
     background-color: white;
     padding: 0 1rem;
-    position: fixed;
     z-index: 99;
     width: 100;
     display: flex;
     align-items:center;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for clarity */
+    height: auto; /* Ensure the header can expand to fit content */
 }
 
 header a {
@@ -37,6 +39,7 @@ h1 {
     color: blue;
     text-transform: uppercase;
     letter-spacing: 2px;
+    margin: 0;
 }
 
 #menu {
@@ -54,12 +57,11 @@ h1 {
 
 /* Navbar dropdown Menu */
 nav {
-    position: absolute;
+    position: relative;
     background-color: white;
     width: 100%;
     left: 0;
     padding: 0 1rem;
-    box-shadow: 0 2px 2px;
 }
 
 /* Move the nav to the right */
@@ -72,7 +74,7 @@ main {
     background-color: lightblue;
 /* Make main element take the surplus space to push footer down */
     flex: 1 0 auto;
-    margin-top: 47px;
+    padding: 1rem;
 }
 
 /* footer */
@@ -104,16 +106,42 @@ footer {
         line-height: 75px;
         margin: 0 0.5rem;
     }
-
-    /* Main content */
-    main {
-        /* Push main content down to accommodate larger header */
-        margin-top: 79px;
-    }
 }
+
+
 /* Large devices (laptops and desktops, 992px and up) */
 @media screen and (min-width: 992px) {
     #menu a:hover{
         border-bottom: 1px solid #3a3a3a;
+    }
+}
+
+/* Media query for phones (small screens) */
+@media screen and (max-width: 767px) {
+    header {
+        flex-direction: column; /* Stack h1 and nav vertically */
+        align-items: flex-start; /* Align items to the left */
+        padding: 1rem;
+    }
+
+    nav {
+        margin-left: 0;
+        width: 100%; /* Make nav take the full width */
+    }
+
+    #menu {
+        flex-direction: column; /* Stack menu items vertically */
+        margin-top: 1em;
+    }
+
+    #menu > li {
+        margin-left: 0;
+        margin-bottom: 1em; /* Add spacing between vertical menu items */
+    }
+    h1 {
+        margin-bottom: 1rem; /* Add space between h1 and the nav */
+    }
+    main {
+        padding: 1rem; /* Padding for better readability */
     }
 }
