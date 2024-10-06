@@ -23,6 +23,8 @@ header {
     position: fixed;
     z-index: 99;
     width: 100;
+    display: flex;
+    align-items:center;
 }
 
 header a {
@@ -41,10 +43,13 @@ h1 {
        font-size: 110;
        letter-spacing: 4px;
        list-style-type: none;
+       margin: 0;
+       padding: 0;
+       display: flex;
 }
 
 #menu > li {
-            margin-bottom: 1em;
+            margin-left: 2em;
 }
 
 /* Navbar dropdown Menu */
@@ -56,6 +61,12 @@ nav {
     padding: 0 1rem;
     box-shadow: 0 2px 2px;
 }
+
+/* Move the nav to the right */
+nav {
+    margin-left: auto;
+}
+
 /* main */
 main {
     background-color: lightblue;
@@ -67,4 +78,42 @@ main {
 /* footer */
 footer {
     background-color: orange;
+}
+/* Media querry tablets and larger 768px and more */
+@media screen and (min-width: 768px) {
+    /* Header */
+    nav {
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+        width: auto;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+        justify-content: flex-end; /* Aligns the menu to the right in larger screens */
+    }
+
+    #menu > li {
+        margin-left: 2em; /* Add space between menu items */
+        margin-bottom: 0; /* Remove vertical margin */
+    }
+    #logo {
+        font-size: 280%;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
+
+    /* Main content */
+    main {
+        /* Push main content down to accommodate larger header */
+        margin-top: 79px;
+    }
+}
+/* Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    #menu a:hover{
+        border-bottom: 1px solid #3a3a3a;
+    }
 }
