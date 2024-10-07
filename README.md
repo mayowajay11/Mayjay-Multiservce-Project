@@ -43,7 +43,7 @@ Steps:
 Clone or download the repository:
 bash
 Copy code
-git clone https://github.com/your-username/mayjay-multiservice-website.git
+git clone https://github.com/mayowajay11/mayjay-multiservice-website.git
 Navigate to the project directory:
 bash
 Copy code
