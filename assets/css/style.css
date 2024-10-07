@@ -79,17 +79,86 @@ main {
     padding: 1rem;
 }
 
+/* Styling the Order Now Form */
+#ordernow-form {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto; /* Center the form */
+    padding: 20px;
+    background-color: #fff; /* White background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box; /* Prevent overflow due to padding */
+}
+
+/* Override the box-sizing for the form and its input fields */
+#ordernow-form,
+#ordernow-form input,
+#ordernow-form textarea {
+    box-sizing: content-box; /* Override the global border-box */
+}
+
+/* Form heading */
+#ordernow-form h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Form Labels */
+#ordernow-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px; /* Space between label and input */
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Form input fields */
+#ordernow-form input[type="text"],
+#ordernow-form input[type="number"] {
+    width: 100%; /* Full width */
+    padding: 12px;
+    margin-bottom: 20px; /* Space between inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* Form submit button */
+#ordernow-form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff; /* Blue button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Button hover effect */
+#ordernow-form input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
 #beer {
     padding-bottom: 50px;
 }
 
 #contact {
-          text-align: center;
-          padding-bottom: 50px;
+    text-align: center;
+    padding-bottom: 50px;
 }
 
 #open-times {
-       text-align: center;
+    text-align: center;
 }
 
 /* Gallery page */
@@ -100,6 +169,7 @@ main {
 
 #photos {
     line-height: 0;
+    
 }
 
 /* footer */
@@ -110,54 +180,15 @@ main {
     justify-content: space-evenly;
     list-style-type: none;
 }
+
 #social-networks i {
     font-size: 160%;
     padding: 5%;
     color: darkgray;
-
-}
-/* Media querry tablets and larger 768px and more */
-@media screen and (min-width: 768px) {
-
-    /* Header */
-    nav {
-        position: static;
-        background-color: transparent;
-        box-shadow: none;
-        width: auto;
-        padding-right: 1rem;
-    }
-
-    #menu {
-        display: flex;
-        justify-content: flex-end;
-        /* Aligns the menu to the right in larger screens */
-    }
-
-    #menu>li {
-        margin-left: 2em;
-        /* Add space between menu items */
-        margin-bottom: 0;
-        /* Remove vertical margin */
-    }
-
-    #logo {
-        font-size: 280%;
-        line-height: 75px;
-        margin: 0 0.5rem;
-    }
-}
-
-
-/* Large devices (laptops and desktops, 992px and up) */
-@media screen and (min-width: 992px) {
-    #menu a:hover {
-        border-bottom: 1px solid #3a3a3a;
-    }
 }
 
 /* Media query for phones (small screens) */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 576px) {
     header {
         flex-direction: column;
         /* Stack h1 and nav vertically */
@@ -192,5 +223,70 @@ main {
     main {
         padding: 1rem;
         /* Padding for better readability */
+    }
+    #photos {
+        column-count: 2;
+        column-gap: 0;
+    }
+    #ordernow-form {
+        padding: 15px;
+        width: 95%; /* Make sure the form doesn't touch the screen edges */
+        margin: 0 auto;
+    }
+}
+
+/* Media querry tablets and larger 768px and more */
+@media screen and (min-width: 768px) {
+
+    /* Header */
+    nav {
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+        width: auto;
+        padding-right: 1rem;
+    }
+
+    #menu {
+        display: flex;
+        justify-content: flex-end;
+        /* Aligns the menu to the right in larger screens */
+    }
+
+    #menu>li {
+        margin-left: 2em;
+        /* Add space between menu items */
+        margin-bottom: 0;
+        /* Remove vertical margin */
+    }
+
+    #logo {
+        font-size: 280%;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
+    /* Gallery */
+    #photos {
+        column-count: 3;
+    }
+
+    #ordernow-form {
+        width: 90%; /* Reduce width on tablets */
+        margin: 0 auto;
+    }
+}
+
+/* Large devices (laptops and desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+    #menu a:hover {
+        border-bottom: 1px solid #3a3a3a;
+    }
+    /* Gallery */
+    #photos {
+        column-count: 4;
+    }
+    #ordernow-form {
+        width: 60%; /* Reduce width for larger screens */
+        margin: 0 auto; /* Center the form on larger devices */
     }
 }
