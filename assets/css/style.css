@@ -245,12 +245,57 @@ main {
 }
 
 /* footer */
+footer {
+    background-color: #1f1f1f; /* Dark background for footer */
+    color: #f0f0f0; /* Light text color for contrast */
+    padding: 40px 20px; /* Increase padding for better spacing */
+    text-align: center;
+}
+
 #social-networks {
     text-align: center;
     padding: 20px 0;
+    gap: 20px;
     display: flex;
     justify-content: space-evenly;
     list-style-type: none;
+}
+
+#social-networks li {
+    display: inline-block;
+}
+
+#social-networks a {
+    color: #f0f0f0; /* Light color for icons */
+    font-size: 1.8rem; /* Increase size of social icons */
+    transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+#social-networks a:hover {
+    color: #ffb703; /* Highlight color on hover (bright yellow) */
+}
+
+#social-networks i {
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #333333; /* Background circle behind icons */
+    transition: background-color 0.3s ease;
+}
+
+#social-networks a:hover i {
+    background-color: #ffb703; /* Change background on hover */
+}
+
+/* Footer text style */
+footer p {
+    font-size: 1rem;
+    color: #ccc; /* Lighter gray text for normal text */
+    margin-top: 20px;
+}
+
+/* Footer hover effect */
+footer a:hover {
+    color: #ffb703; /* Bright hover effect for footer links */
 }
 
 #social-networks i {
@@ -304,6 +349,18 @@ main {
         padding: 15px;
         width: 95%; /* Make sure the form doesn't touch the screen edges */
         margin: 0 auto;
+    }
+
+    footer {
+        padding: 30px 10px; /* Adjust padding on smaller devices */
+    }
+
+    #social-networks {
+        gap: 15px; /* Reduce space between icons */
+    }
+
+    #social-networks a {
+        font-size: 1.6rem; /* Slightly smaller icons on small screens */
     }
 }
 
