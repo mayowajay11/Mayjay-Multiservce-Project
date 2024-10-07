@@ -152,14 +152,86 @@ main {
     padding-bottom: 50px;
 }
 
+/* Contact section styling */
 #contact {
-    text-align: center;
-    padding-bottom: 50px;
+    background-color: #f0f4f8; /* Light background for contrast */
+    padding: 40px 20px; /* Add padding */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 30px; /* Space below the section */
 }
 
+#contact h2 {
+    color: #007bff; /* Blue color for heading */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+#contact span {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+/* Add icons for contact details */
+#contact p:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 8px;
+}
+
+#contact p:nth-child(2):before {
+    content: "\f3c5"; /* Map marker icon for address */
+}
+
+#contact p:nth-child(3):before {
+    content: "\f095"; /* Phone icon */
+}
+
+#contact p:nth-child(4):before {
+    content: "\f0e0"; /* Envelope icon for email */
+}
+
+/* Open Times section styling */
 #open-times {
+    background-color: #e8f5e9; /* Light green background */
+    padding: 40px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
+
+#open-times h2 {
+    color: #007bff; /* Blue color for heading */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+#open-times span {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Add a divider line between the days */
+#open-times span:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+/* Hover effect for icons in the footer */
+#social-networks i:hover {
+    color: #007bff; /* Blue on hover */
+}
+
 
 /* Gallery page */
 #photos img {
